@@ -1,0 +1,11 @@
+---
+- name: "yum | ensure Google Chrome repo present"
+  yum_repository:
+    name: googlechrome
+    description: Google Chrome repository
+    state: present
+    file: googlechrome 
+    baseurl: "{{ chrome_repo_url }}"
+    gpgkey: "{{ chrome_gpg_key_url }}"
+    gpgcheck: yes
+  become: yes

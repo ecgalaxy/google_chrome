@@ -1,0 +1,4 @@
+---
+
+chrome_package: google-chrome-stable
+chrome_gpg_key_url: https://dl-ssl.google.com/linux/linux_signing_key.pub
