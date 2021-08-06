@@ -1,0 +1,13 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Check binary file
+      stat:
+        path: /usr/bin/google-chrome
+      register: bin
+    - name: Assert that Google Chrome is installed.
+      assert:
+        that:
+          - "bin.stat.exists"
