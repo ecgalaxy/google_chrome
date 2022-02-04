@@ -1,22 +1,23 @@
 ---
-
 galaxy_info:
+  name: google_chrome
   author: ecgalaxy
-  description: Install Google Chrome.
+  description: Installs Google Chrome browser
   company: European Commission
-  platforms:
-  - name: Amazon Linux 2
-    versions:
-    - all
-  - name: EL
-    versions:
-    - 7
-    - 8
-  - name: Ubuntu
-    versions:
-    - bionic
-    - focal
   license: EUPL-1.2
-  min_ansible_version: 2.1
-  galaxy_tags: []
+  min_ansible_version: 2.5
+  platforms:
+    - name: Amazon Linux 2
+      versions:
+        - all
+    - name: EL
+      versions:
+        - 7
+        - 8
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+  galaxy_tags:
+    - desktop
 dependencies: []

@@ -1,14 +1,14 @@
 ---
-- name: Include OS family specific vars.
+- name: Include OS family specific vars
   with_first_found:
     - "../vars/os-families/{{ ansible_os_family }}.yml"
   include_vars: "{{ item }}"
 
-- name: Add Google Chrome repository.
+- name: Add Google Chrome repository
   include: "add-repo-{{ ansible_os_family }}.yml"
 
-- name: Ensure Google Chrome present.
+- name: Ensure Google Chrome present
   package:
     name: "{{ chrome_package }}"
     state: present
-  become: yes
+  become: true

@@ -1,15 +1,15 @@
 ---
-- name: "apt | ensure Google linux signing key present"
-  apt_key: 
+- name: Ensure Google signing key present
+  apt_key:
     url: "{{ chrome_gpg_key_url }}"
     state: present
-  become: yes
+  become: true
 
-- name: "apt | ensure Google Chrome repo present"
+- name: Ensure Google Chrome repo present
   apt_repository:
     repo: "deb [arch=amd64] {{ chrome_repo_url }} stable main"
     filename: "google-chrome"
     state: present
     update_cache: yes
   changed_when: false
-  become: yes
+  become: true
