@@ -1,6 +1,6 @@
 ---
 - name: Ensure Google Chrome repo present
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: googlechrome
     description: Google Chrome repository
     state: present
