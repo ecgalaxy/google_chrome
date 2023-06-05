@@ -7,5 +7,5 @@
     file: googlechrome
     baseurl: "{{ chrome_repo_url }}"
     gpgkey: "{{ chrome_gpg_key_url }}"
-    gpgcheck: yes
+    gpgcheck: no
   become: true
