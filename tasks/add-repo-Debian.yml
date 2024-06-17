@@ -10,6 +10,6 @@
     repo: "deb [arch=amd64] {{ chrome_repo_url }} stable main"
     filename: "google-chrome"
     state: present
-    update_cache: yes
+    update_cache: true
   changed_when: false
   become: true

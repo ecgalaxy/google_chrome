@@ -1,5 +1,9 @@
 # Releases
 
+## 2.0.x
+
+- Support for RHEL 7 is removed.
+
 ## 1.2.x
 
 - Support for Ubuntu 22.04 LTS is added.
