@@ -4,6 +4,10 @@
     - "../vars/os-families/{{ ansible_os_family }}.yml"
   ansible.builtin.include_vars: "{{ item }}"
 
+- name: Include Distribution-specific vars (Amazon Linux)
+  ansible.builtin.include_vars: "{{ ansible_distribution }}.yml"
+  when: ansible_distribution == 'Amazon'
+
 - name: Add Google Chrome repository
   ansible.builtin.include_tasks: "add-repo-{{ ansible_os_family }}.yml"
 
